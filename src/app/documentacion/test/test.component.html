@@ -1,0 +1,25 @@
+<p>{{titulo}}</p>
+<hr>
+<h4>Tipos de variables</h4>
+<p>string: mi nombre es: {{nombre}}</p>
+<p>number: tengo {{edad}} años</p>
+<p>boolean: ¿soy mayor de edad? {{mayorDeEdad}}</p>
+<hr>
+<h4>Uso de la clase Empleado</h4>
+<ul>
+  <li>Nombre: {{empleado.nombre}}</li>
+  <li>Edad: {{empleado.edad}}</li>
+  <li>Cargo: {{empleado.cargo}}</li>
+  <li>Sexo: {{empleado.sexo}}</li>
+  <li>Licencia de Conducir: {{empleado.licenciaConducir}}</li>
+</ul>
+
+<h4>Uso del *ngFor para mostrar los elementos de una lista</h4>
+<ul *ngFor="let item of trabajadores; let i = index">
+  <li>Nombre: {{item.nombre}}</li>
+  <li>Edad: {{item.edad}}</li>
+  <li>Cargo: {{item.cargo}}</li>
+  <li>Sexo: {{item.sexo}}</li>
+  <li>Licencia de Conducir: {{item.licenciaConducir}}</li>
+</ul>
+
