@@ -27,6 +27,8 @@ export class TestComponent implements OnInit {
   //ngIF
   public mostrar:boolean;
 
+  public color:string;
+
   /*El constructor ayuda a cargar las propiedades de la clase,
   como los llamados a un servicio o referencia a una clase, para utilizar nuestras
   variables es necesario el uso del 'this.'variable*/
@@ -61,6 +63,9 @@ export class TestComponent implements OnInit {
 
     //ngIF
     this.mostrar = true;
+    //ngSwitch
+    //Cambia este color por: red, green o blue
+    this.color = 'blue';
   }
 
   holaMundo(nombre){

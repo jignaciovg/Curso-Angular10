@@ -38,3 +38,12 @@
   <p>Contenido 2</p>
 </div>
 
+<hr>
+<h4>Uso del *ngSwitch y *ngStyle con colores</h4>
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'red'" [ngStyle]="{'background':color,'color':'white'}">Color Rojo</li>
+  <li *ngSwitchCase="'green'" [ngStyle]="{'background':color,'color':'white'}">Color Verde</li>
+  <li *ngSwitchCase="'blue'" [ngStyle]="{'background':color,'color':'white'}">Color Azul</li>
+
+</ul>
+
