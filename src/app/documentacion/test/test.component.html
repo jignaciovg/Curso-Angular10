@@ -5,6 +5,7 @@
 <p>number: tengo {{edad}} años</p>
 <p>boolean: ¿soy mayor de edad? {{mayorDeEdad}}</p>
 <hr>
+
 <h4>Uso de la clase Empleado</h4>
 <ul>
   <li>Nombre: {{empleado.nombre}}</li>
@@ -14,6 +15,7 @@
   <li>Licencia de Conducir: {{empleado.licenciaConducir}}</li>
 </ul>
 <hr>
+
 <h4>Uso del *ngFor para mostrar los elementos de una lista</h4>
 <ul *ngFor="let item of trabajadores; let i = index">
   <li>Nombre: {{item.nombre}}</li>
@@ -22,28 +24,48 @@
   <li>Sexo: {{item.sexo}}</li>
   <li>Licencia de Conducir: {{item.licenciaConducir}}</li>
 </ul>
-
 <hr>
-<h4>Uso del *ngIf para mostrar u ocultar contenido</h4>
 
+<h4>Uso del *ngIf para mostrar u ocultar contenido</h4>
 <div *ngIf="mostrar">
   <button (click)="showComponent(false)">Mostrar Contenido 2</button>
   <p>Se muestra cuando el valor es TRUE</p>
   <p>Contenido 1</p>
 </div>
-
 <div *ngIf="!mostrar">
   <button (click)="showComponent(true)">Mostrar Contenido 1</button>
   <p>Se muestra cuando el valor es FALSE</p>
   <p>Contenido 2</p>
 </div>
-
 <hr>
+
 <h4>Uso del *ngSwitch y *ngStyle con colores</h4>
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'red'" [ngStyle]="{'background':color,'color':'white'}">Color Rojo</li>
   <li *ngSwitchCase="'green'" [ngStyle]="{'background':color,'color':'white'}">Color Verde</li>
   <li *ngSwitchCase="'blue'" [ngStyle]="{'background':color,'color':'white'}">Color Azul</li>
-
 </ul>
+<hr>
 
+<h4>Uso de los data-binding para cambios de un valor en tiempo real</h4>
+<h5>Selector de color</h5>
+<input type="text" [(ngModel)]="color_seleccionado"/>
+<p
+[style.border]="color_seleccionado == 'blue'?'5px solid color_seleccionado':'3px solid red'"
+[class.fondoVerde]="color_seleccionado == 'green'"
+>Color elegido: {{color_seleccionado}}</p>
+<div [ngStyle]="{
+  'background':color_seleccionado,
+  'width':'200px',
+  'height':'200px',
+  'float':'right',
+  'margin-right':'70%'
+}" style="clear: both;"></div>
+
+<h4
+[ngClass]="{
+  fondoVerde:color_seleccionado == 'green',
+  fondoAzul:color_seleccionado == 'blue',
+  fondoRojo:color_seleccionado == 'red',
+  fondoAmarillo:color_seleccionado =='yellow'
+}">Uso de ngClass</h4>

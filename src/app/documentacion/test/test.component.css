@@ -1,0 +1,18 @@
+.fondoVerde{
+ background:  green !important;
+ color: white !important;
+}
+.fondoAzul{
+  background:  blue !important;
+  color: white !important;
+}
+
+.fondoRojo{
+  background:  red !important;
+  color: white !important;
+}
+
+.fondoAmarillo{
+  background:  yellow !important;
+  color: black !important;
+}

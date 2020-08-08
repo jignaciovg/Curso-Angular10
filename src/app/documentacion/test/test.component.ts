@@ -26,8 +26,10 @@ export class TestComponent implements OnInit {
   public trabajadores:Array<Empleado>
   //ngIF
   public mostrar:boolean;
-
+  //ngSwitch
   public color:string;
+  //databinding
+  public color_seleccionado:string;
 
   /*El constructor ayuda a cargar las propiedades de la clase,
   como los llamados a un servicio o referencia a una clase, para utilizar nuestras
@@ -66,6 +68,8 @@ export class TestComponent implements OnInit {
     //ngSwitch
     //Cambia este color por: red, green o blue
     this.color = 'blue';
+
+    this.color_seleccionado = '#ccc';
   }
 
   holaMundo(nombre){
