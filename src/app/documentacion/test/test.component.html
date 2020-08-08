@@ -1,4 +1,4 @@
-<p>{{titulo}}</p>
+<h3>{{titulo}}</h3>
 <hr>
 <h4>Tipos de variables</h4>
 <p>string: mi nombre es: {{nombre}}</p>
@@ -13,7 +13,7 @@
   <li>Sexo: {{empleado.sexo}}</li>
   <li>Licencia de Conducir: {{empleado.licenciaConducir}}</li>
 </ul>
-
+<hr>
 <h4>Uso del *ngFor para mostrar los elementos de una lista</h4>
 <ul *ngFor="let item of trabajadores; let i = index">
   <li>Nombre: {{item.nombre}}</li>
@@ -22,4 +22,19 @@
   <li>Sexo: {{item.sexo}}</li>
   <li>Licencia de Conducir: {{item.licenciaConducir}}</li>
 </ul>
+
+<hr>
+<h4>Uso del *ngIf para mostrar u ocultar contenido</h4>
+
+<div *ngIf="mostrar">
+  <button (click)="showComponent(false)">Mostrar Contenido 2</button>
+  <p>Se muestra cuando el valor es TRUE</p>
+  <p>Contenido 1</p>
+</div>
+
+<div *ngIf="!mostrar">
+  <button (click)="showComponent(true)">Mostrar Contenido 1</button>
+  <p>Se muestra cuando el valor es FALSE</p>
+  <p>Contenido 2</p>
+</div>
 

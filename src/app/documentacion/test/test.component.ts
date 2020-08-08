@@ -24,6 +24,8 @@ export class TestComponent implements OnInit {
   public empleado:Empleado;
   // arreglo con la clase Empleado
   public trabajadores:Array<Empleado>
+  //ngIF
+  public mostrar:boolean;
 
   /*El constructor ayuda a cargar las propiedades de la clase,
   como los llamados a un servicio o referencia a una clase, para utilizar nuestras
@@ -57,10 +59,16 @@ export class TestComponent implements OnInit {
     console.log(this.empleado);
     console.log(this.trabajadores);
 
+    //ngIF
+    this.mostrar = true;
   }
 
   holaMundo(nombre){
     alert('Hola ' + nombre + '!');
+  }
+
+  showComponent(value){
+    this.mostrar = value;
   }
 
 }
