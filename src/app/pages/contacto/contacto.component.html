@@ -1,1 +1,11 @@
 <h2>Pagina de Contacto</h2>
+<div *ngIf="parametro">
+  Parametro de la URL: {{parametro}}
+</div>
+<div *ngIf="!parametro">
+  <button (click)="redireccion()">Ir a la ruta con un parametro</button>
+  <br><br>
+  <button (click)="redireccionAll('/home')">Ir a la ruta Home</button>
+  <br><br>
+  <button (click)="redireccionAll('/test')">Ir a la ruta Test</button>
+</div>

@@ -12,6 +12,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'test',component:TestComponent},
   {path:'contacto',component:ContactoComponent},
+  //URL que recibe un parametro
+  {path:'contacto/:page',component:ContactoComponent},
   {path: '**', component: NotFoundComponent },  // Wildcard route for a 404 page
 ];
 
