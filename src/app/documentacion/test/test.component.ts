@@ -10,7 +10,7 @@ import{Empleado} from '../empleado';
 export class TestComponent implements OnInit {
   /*Comando para crear este componente
   ng g c documentacion/test --skipTests=true*/
-  public titulo = 'Componente de pruebas';
+  public titulo = 'Pagina de Pruebas';
 
   public nombre:string = 'Ignacio Vaqueiro';
   public edad:number;
